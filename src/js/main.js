@@ -18,8 +18,10 @@ function createTask() {
 	newTask.title = document.getElementById('title').value;
 	newTask.description = document.getElementById('description').value;
 	newTask.status = TaskStatus.PENDING;
-	console.log(tasks);
 	tasks.push(newTask);
+   alert('Tarea creada con éxito!!!');
+   document.getElementById('title').value = '';
+   document.getElementById('description').value = '';
 }
 
 /**
@@ -126,17 +128,23 @@ function getPendingTasks() {
 
 			taskList.appendChild(card);
 		}
-		console.log(task);
 	}
 }
 
 function deleteTask() {
-   const taskId = document.getElementById('id').value;
+   let taskId = document.getElementById('id').value;
    const taskIndex = tasks.findIndex(task => task.id === parseInt(taskId));
-   console.log(taskIndex);
+
+   if (taskIndex === -1 || taskId === '') {
+      alert('Tarea no encontrada!!!');
+      document.getElementById('id').value = '';
+      return;
+   }
+
    tasks.splice(taskIndex, 1);
+   alert('Tarea eliminada con éxito!!!');
+   document.getElementById('id').value = '';
    getTasks();
-   taskId.value = '';
 }
 
 /**
