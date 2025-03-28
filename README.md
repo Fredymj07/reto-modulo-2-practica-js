@@ -1,2 +1,14 @@
-# reto-modulo-2-practica-js
-Reto modulo 2 – Practica JS
+# Task List Management
+
+Proyecto de aprendizaje acerca de Javascript Básico, dónde se implementan conocimientos en Html, CSS y Javascript.
+
+
+## Tech Stack
+
+**Client:** Html, CSS, Javascript
+
+
+## Authors
+
+- [@Fredymj07](https://github.com/Fredymj07)
+
