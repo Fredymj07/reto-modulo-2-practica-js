@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-</head>
-<body>
-   
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../public/task-list.ico" type="image/x-icon" />
+      <link rel="stylesheet" href="/src/css/styles.css" />
+		<title>Lista de Tareas</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>GESTOR DE TAREAS</h1>
+
+         <div class="task-input">
+            <label>Nombre</label>
+            <input type="text" id="title" placeholder="Nombre de la tarea" />
+            <label>Descripción</label>
+            <input type="text" id="description" placeholder="Descripción de la tarea" />
+            <button onclick="createTask()">Agregar tarea</button>
+         </div>
+
+			<h2>Listado de tareas</h2>
+			<button onclick="getTasks()">Obtener tareas</button>
+			<ul id="taskList" class="task-list"></ul>
+
+         <button onclick="getCompletedTasks()">Completas</button>
+         <button onclick="getPendingTasks()">Pendientes</button>
+
+			<h2>Elimación de tarea</h2>
+			<div class="delete-task">
+            <label>Id</label>
+            <input type="text" id="id" placeholder="Identificador de la tarea" />
+            <button onclick="deleteTask()">Eliminar tarea</button>
+         </div>
+		</div>
+
+		<script type="module" src="/src/js/main.js"></script>
+	</body>
 </html>
