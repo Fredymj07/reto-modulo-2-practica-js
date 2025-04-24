@@ -8,9 +8,15 @@
 		<title>Lista de Tareas</title>
 	</head>
 	<body>
-		<div class="container">
-			<h1>GESTOR DE TAREAS</h1>
+		<nav class="navbar">
+			<div class="navbar-title">Gestor de Tareas</div>
+			<div class="navbar-links">
+				<a href="/views/user.html" class="tab-link">Usuarios</a>
+				<a href="/views/category.html" class="tab-link">Categorías</a>
+			</div>
+		</nav>
 
+		<div class="container">
          <div class="task-input">
             <label>Nombre</label>
             <input type="text" id="title" placeholder="Nombre de la tarea" />
