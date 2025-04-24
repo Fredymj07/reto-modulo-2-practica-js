@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../public/user.ico" type="image/x-icon" />
+   <link rel="stylesheet" href="../src/css/shared-styles.css">
+   <title>Document</title>
+</head>
+<body onload="getUsers()">
+   <nav class="navbar">
+      <div class="navbar-title">Gestor de Tareas</div>
+      <div class="navbar-links">
+         <a href="/views/index.html" class="tab-link">Tareas</a>
+         <a href="/views/category.html" class="tab-link">Categorías</a>
+      </div>
+   </nav>
+
+   <div>
+      <h2>Lista de Usuarios</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Nombre</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody id="usersList">
+            <!-- Aquí se agregarán los empleados -->
+         </tbody>
+      </table>
+   </div>
+
+   <!-- Botón para abrir el modal -->
+   <div>
+      <button id="openModalBtn" class="btn-primary">Crear Nuevo Usuario</button>
+   </div>
+
+   <!-- Modal -->
+   <div id="userModal" class="modal">
+      <div class="modal-content">
+         <span class="close-btn" id="closeModalBtn">&times;</span>
+         <h2>Crear Nuevo Usuario</h2>
+         <form id="userForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Ingrese el nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese el email" required>
+            <button type="submit" class="btn-primary-modal" onclick="addUser()">Guardar</button>
+         </form>
+      </div>
+   </div>
+
+   <script type="module" src="/src/js/userService.js"></script>
+</body>
+</html>

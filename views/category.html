@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../public/category.ico" type="image/x-icon" />
+   <link rel="stylesheet" href="../src/css/shared-styles.css">
+   <title>Document</title>
+</head>
+<body onload="">
+   <nav class="navbar">
+      <div class="navbar-title">Gestor de Tareas</div>
+      <div class="navbar-links">
+         <a href="/views/index.html" class="tab-link">Tareas</a>
+         <a href="/views/user.html" class="tab-link">Usuarios</a>
+      </div>
+   </nav>
+
+   <div>
+      <h2>Lista de Categorías</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Nombre</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody id="categoriesList">
+            <!-- Aquí se agregarán las categorías -->
+         </tbody>
+      </table>
+   </div>
+
+   <!-- Botón para abrir el modal -->
+   <div>
+      <button id="openModalBtn" class="btn-primary">Crear Nueva Categoría</button>
+   </div>
+
+   <!-- Modal -->
+   <div id="categoryModal" class="modal">
+      <div class="modal-content">
+         <span class="close-btn" id="closeModalBtn">&times;</span>
+         <h2>Crear Nueva Categoría</h2>
+         <form id="categoryForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Ingrese el nombre" required>
+            <button type="submit" class="btn-primary-modal" onclick="">Guardar</button>
+         </form>
+      </div>
+   </div>
+
+   <script type="module" src="../src/js/categoryService.js"></script>
+</body>
+</html>

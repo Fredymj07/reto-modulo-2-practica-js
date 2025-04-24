@@ -1,10 +1,54 @@
 /* General styles */
 body {
-   font-family: Arial, sans-serif;
+   font-family: 'Roboto', Arial, sans-serif;
    margin: 0;
    padding: 0;
    background-color: #f4f4f9;
    color: #333;
+   line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #007BFF;
+   color: #fff;
+   padding: 10px 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+.navbar-links a {
+   color: #fff;
+   text-decoration: none;
+   margin: 0 10px;
+   padding: 8px 15px;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+   background-color: #0056b3;
+}
+
+.navbar-links .active {
+   background-color: #0056b3;
+}
+
+/* Tabs content styles */
+.tab-content {
+   margin: 20px auto;
+   width: 90%;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -28,6 +72,7 @@ h2 {
 
 /* Input task form styles */
 .task-input {
+   margin-top: 40px;
    display: flex;
    flex-direction: column;
    gap: 10px;
