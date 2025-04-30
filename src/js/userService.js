@@ -35,7 +35,6 @@ async function addUser() {
          name: name,
          email: email
       };
-      console.log(user);
 
       const response = await fetch(`${apiUrl}/api/v1/user`, {
          method: 'POST',
@@ -49,10 +48,10 @@ async function addUser() {
          throw new Error(`Error adding to user: ${response.status} ${response.statusText}`);
       }
 
-      const data = await  response.json();
+      const data = await response.json();
       console.log('User added succesfully:', data);
 
-      alert('Usuario creado exitosamente');
+      alert('Usuario creado correctamente');
 
       userModal.style.display = 'none';
       userForm.reset();
@@ -100,3 +99,4 @@ userForm.addEventListener('submit', (event) => {
 
 window.getUsers = getUsers;
 window.addUser = addUser;
+window.filterByUser = filterByUser;
