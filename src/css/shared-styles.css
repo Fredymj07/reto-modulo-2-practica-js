@@ -127,6 +127,50 @@ td {
    background-color: #0056b3;
 }
 
+/* Estilo para el contenedor de filtros */
+#filters {
+   display: flex;
+   justify-content: center; /* Centra los elementos horizontalmente */
+   align-items: center; /* Alinea los elementos verticalmente */
+   gap: 15px; /* Espaciado entre los elementos */
+   margin: 20px auto; /* Centra el div horizontalmente y agrega espaciado vertical */
+   padding: 10px; /* Espaciado interno */
+   background-color: #f9f9f9; /* Fondo claro */
+   border: 1px solid #ddd; /* Borde delgado */
+   border-radius: 5px; /* Bordes redondeados */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+   width: 88%;
+}
+
+/* Estilo para los select */
+#filters select {
+   padding: 10px; /* Espaciado interno */
+   border: 1px solid #ddd; /* Borde delgado */
+   border-radius: 5px; /* Bordes redondeados */
+   font-size: 1rem; /* Tamaño de fuente */
+   background-color: #fff; /* Fondo blanco */
+   color: #333; /* Color del texto */
+   cursor: pointer; /* Cambia el cursor al pasar sobre el select */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilo para los botones */
+#filters button {
+   padding: 10px 20px; /* Espaciado interno */
+   background-color: #007BFF; /* Fondo azul */
+   color: #fff; /* Texto blanco */
+   border: none; /* Sin borde */
+   border-radius: 5px; /* Bordes redondeados */
+   font-size: 1rem; /* Tamaño de fuente */
+   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+   transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para los botones al pasar el cursor */
+#filters button:hover {
+   background-color: #0056b3; /* Fondo azul más oscuro */
+}
+
 .btn-primary-modal {
    padding: 10px;
    background-color: #007BFF;
@@ -140,6 +184,33 @@ td {
 
 .btn-primary-modal:hover {
    background-color: #0056b3;
+}
+
+/* Estilo para el elemento select */
+select {
+   width: 100%; /* Ocupa todo el ancho disponible */
+   padding: 10px; /* Espaciado interno */
+   margin: 10px 0; /* Espaciado externo */
+   border: 1px solid #ddd; /* Borde delgado */
+   border-radius: 5px; /* Bordes redondeados */
+   font-size: 1rem; /* Tamaño de fuente */
+   background-color: #fff; /* Fondo blanco */
+   color: #333; /* Color del texto */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+   appearance: none; /* Elimina el estilo predeterminado del navegador */
+   cursor: pointer; /* Cambia el cursor al pasar sobre el select */
+}
+
+/* Estilo para el select al pasar el cursor */
+select:hover {
+   border-color: #007BFF; /* Cambia el color del borde al pasar el cursor */
+}
+
+/* Estilo para el select al estar enfocado */
+select:focus {
+   outline: none; /* Elimina el contorno predeterminado */
+   border-color: #007BFF; /* Color del borde al enfocar */
+   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul */
 }
 
 /* Modal styles */

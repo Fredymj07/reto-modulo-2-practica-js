@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="../src/css/shared-styles.css">
    <title>Document</title>
 </head>
-<body onload="">
+<body onload="getCategories()">
    <nav class="navbar">
       <div class="navbar-title">Gestor de Tareas</div>
       <div class="navbar-links">
@@ -22,7 +22,6 @@
          <thead>
             <tr>
                <th>Nombre</th>
-               <th>Email</th>
             </tr>
          </thead>
          <tbody id="categoriesList">
@@ -44,11 +43,11 @@
          <form id="categoryForm">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" placeholder="Ingrese el nombre" required>
-            <button type="submit" class="btn-primary-modal" onclick="">Guardar</button>
+            <button type="submit" class="btn-primary-modal" onclick="addCategory()">Guardar</button>
          </form>
       </div>
    </div>
 
-   <script type="module" src="../src/js/categoryService.js"></script>
+   <script type="module" src="/src/js/categoryService.js"></script>
 </body>
 </html>
