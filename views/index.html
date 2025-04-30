@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="../public/task-list.ico" type="image/x-icon" />
-      <link rel="stylesheet" href="/src/css/styles.css" />
+      <link rel="stylesheet" href="/src/css/shared-styles.css" />
 		<title>Lista de Tareas</title>
 	</head>
 	<body>
@@ -16,30 +16,40 @@
 			</div>
 		</nav>
 
-		<div class="container">
-         <div class="task-input">
-            <label>Nombre</label>
-            <input type="text" id="title" placeholder="Nombre de la tarea" />
-            <label>Descripción</label>
-            <input type="text" id="description" placeholder="Descripción de la tarea" />
-            <button onclick="createTask()">Agregar tarea</button>
-         </div>
+		<div>
+			<h2>Lista de Tareas</h2>
 
-			<h2>Listado de tareas</h2>
-			<button onclick="getTasks()">Obtener tareas</button>
-			<ul id="taskList" class="task-list"></ul>
+			<div id="filters">
+				<label for="usersSelect">Usuario</label>
+				<select id="usersSelect" onchange="filterTaskByUser()"></select>
 
-         <button onclick="getCompletedTasks()">Completas</button>
-         <button onclick="getPendingTasks()">Pendientes</button>
+				<label for="stageSelect">Estado</label>
+				<select name="stages" id="stageSelect" required></select>
 
-			<h2>Elimación de tarea</h2>
-			<div class="delete-task">
-            <label>Id</label>
-            <input type="text" id="id" placeholder="Identificador de la tarea" />
-            <button onclick="deleteTask()">Eliminar tarea</button>
-         </div>
+				<label for="prioritySelect">Prioridad</label>
+				<select name="priorities" id="prioritySelect" required></select>
+
+				<label for="categorySelect">Categoría</label>
+				<select name="categories" id="categorySelect" required></select>
+			</div>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Título</th>
+						<th>Descripción</th>
+						<th>Estado</th>
+						<th>Prioridad</th>
+						<th>Usuario</th>
+						<th>Categoría</th>
+					</tr>
+				</thead>
+				<tbody id="tasksList">
+					<!-- Aquí se agregarán los empleados -->
+				</tbody>
+			</table>
 		</div>
 
-		<script type="module" src="/src/js/main.js"></script>
+		<script type="module" src="/src/js/taskService.js"></script>
 	</body>
 </html>
