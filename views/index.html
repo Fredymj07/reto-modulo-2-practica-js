@@ -20,17 +20,19 @@
 			<h2>Lista de Tareas</h2>
 
 			<div id="filters">
-				<label for="usersSelect">Usuario</label>
-				<select id="usersSelect" onchange="filterTaskByUser()"></select>
+				<label for="userSelect">Usuario</label>
+				<select id="userSelect" onchange="filterTaskByUser()"></select>
 
 				<label for="stageSelect">Estado</label>
-				<select name="stages" id="stageSelect" required></select>
+				<select id="stageSelect" onchange="filterTaskByStage()"></select>
 
 				<label for="prioritySelect">Prioridad</label>
-				<select name="priorities" id="prioritySelect" required></select>
+				<select id="prioritySelect" onchange="filterTaskByPriority()"></select>
 
 				<label for="categorySelect">Categoría</label>
-				<select name="categories" id="categorySelect" required></select>
+				<select id="categorySelect" onchange="filterTaskByCategory()"></select>
+
+				<button onclick="cleanFilters()">Limpiar</button>
 			</div>
 
 			<table>
@@ -48,6 +50,8 @@
 					<!-- Aquí se agregarán los empleados -->
 				</tbody>
 			</table>
+
+			<span id="tasksByUser"></span>
 		</div>
 
 		<script type="module" src="/src/js/taskService.js"></script>

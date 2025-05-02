@@ -186,6 +186,16 @@ td {
    background-color: #0056b3;
 }
 
+#tasksByUser {
+   display: block;
+   width: 90%;
+   margin: 10px auto;
+   text-align: left;
+   font-size: 1rem;
+   color: #444;
+   padding-left: 2%;
+}
+
 /* Estilo para el elemento select */
 select {
    width: 100%; /* Ocupa todo el ancho disponible */
